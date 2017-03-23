@@ -4,7 +4,7 @@
 
 int main()
 {
-
+     int a,b,c,d;
      SmartArray  *pArray = new SmartArray(10);
 
      (*pArray).info();
@@ -30,15 +30,14 @@ int main()
      for (int i = 0; i < 30; i++)
          std::cout<<i<<" : "<<((*pNewArray)[i])<<std::endl;
 
-     std::cout<<"Current value : "<<"pArray[2] is "<<((*pArray)[2])<<", "<<"pArray[4] is "<<((*pArray)[4])<<" \t"<<"pNewArray[16] is "<<((*pNewArray)[16])<<", "<<"pNewArray[12] is "<<((*pNewArray)[12])<<std::endl;
-     std::cout<<std::endl;
+    std::cout<<"Enter elements of the first array a,b"<<std::endl;
+    std::cin>>a>>b;
+    std::cout<<"Enter elements of the second array c,d"<<std::endl;
+    std::cin>>c>>d;
+    std::cout<<"Current value is : "<<(*pArray)[a]<<"\t"<<(*pArray)[b]<<"\t"<<(*pNewArray)[c]<<"\t"<<(*pNewArray)[d]<<std::endl;
 
-    ( *pArray).swap((*pArray)[2],(*pArray)[4],(*pNewArray)[16],(*pNewArray)[12]);
-
-
-     std::cout<<"New Value : "<<"pArray[2] is "<<((*pArray)[2])<<", "<<"pArray[4] is "<<((*pArray)[4])<<" \t"<<"pNewArray[16] is "<<((*pNewArray)[16])<<", "<<"pNewArray[12] is "<<((*pNewArray)[12])<<std::endl;
-     std::cout<<std::endl;
-
+    (*pArray).swap((*pArray)[a],(*pArray)[b],(*pNewArray)[c],(*pNewArray)[d]);
+    std::cout<<"New value is : "<<(*pArray)[a]<<"\t"<<(*pArray)[b]<<"\t"<<(*pNewArray)[c]<<"\t"<<(*pNewArray)[d];
 
 
      delete pArray;
